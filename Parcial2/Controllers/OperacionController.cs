@@ -17,7 +17,7 @@ namespace Parcial2.Controllers
             this.operacionServices = new OperacionServices(configuration.GetConnectionString("postgresDB"));
         }
 
-        [HttpPut("Extracto/{NumeroCuenta}")]
+        [HttpGet("Extracto/{NumeroCuenta}")]
         public ActionResult ImprimirExtracto(string NumeroCuenta)
         {
             var resultado = operacionServices.ImprimirExtractoPorNumCuenta(NumeroCuenta);
